@@ -39,44 +39,46 @@ The code reads from a CSV file containing COVID-19 related tweets. The expected 
 - Column 8: Tweet content
 
 ## How It Works
-1. The application reads tweets from the CSV file
-2. Each tweet is processed to:
+1. **The application reads tweets from the CSV file**
+2. **Each tweet is processed to:**
    - Clean the text (remove punctuation)
    - Format the date properly
    - Extract the username
-3. The application performs two main analyses:
+3. **The application performs two main analyses:**
    - Word frequency analysis: counts non-stopwords and displays them sorted by frequency
    - Sentiment analysis: determines the sentiment score of each tweet
 
 ## How To Use It
 
-### Step 1: Clone the Repository
+1.  **Clone the Repository**
 
-Git clone this repository into your folder of choice using 
-  ```bash
-    git clone https://github.com/Coleg2005/COVID-Sentiment-Analyzer
-  ```
- and make a folder inside called lib.
+      Git clone this repository into your folder of choice using 
+      ```bash
+          git clone https://github.com/Coleg2005/COVID-Sentiment-Analyzer
+      ```
+      and then a folder inside called lib.
 
 
-### Step 2: Download Needed Files
+2. **Download Needed Files**
 
-If you don't have JDK (Java Development Kit) installed, install it [here](https://www.oracle.com/java/technologies/downloads/).
+    If you don't have JDK (Java Development Kit) installed, install it [here](https://www.oracle.com/java/technologies/downloads/).
+    
+    Then download these 3 dependencies and put them into the lib folder.
+    
+    Install the zip folder [here](https://nlp.stanford.edu/software/stanford-corenlp-full-2018-10-05.zip)
+    
+    From the zip folder, you only need one file:
+    
+     ```bash
+          stanford-corenlp-3.9.2.jar
+     ```
+    
+    The second & third file you will need can be found [here](https://repo1.maven.org/maven2/com/googlecode/efficient-java-matrix-library/ejml/0.23/ejml-0.23.jar) and [here](https://nlp.stanford.edu/software/stanford-english-corenlp-2018-10-05-models.jar)
+    
 
-Then download these 3 dependencies and put them into the lib folder.
+   Put these 3 files in the lib folder
 
-Install the zip folder [here](https://nlp.stanford.edu/software/stanford-corenlp-full-2018-10-05.zip)
-
-From the zip folder, you only need one file:
-    ```bash
-    stanford-corenlp-3.9.2.jar
-    ```
-
-The second & third file you will need can be found [here](https://repo1.maven.org/maven2/com/googlecode/efficient-java-matrix-library/ejml/0.23/ejml-0.23.jar) and [here](https://nlp.stanford.edu/software/stanford-english-corenlp-2018-10-05-models.jar)
-
-Put these 3 files in the lib folder
-
-6. **Compile the project:**
+3. **Compile the project:**
         
     - **MacOS/Linux:**
         ```bash
@@ -86,7 +88,7 @@ Put these 3 files in the lib folder
         ```bash
         javac -cp "lib/*;." -d . src/*.java
         ```
-7. **Run the project:**
+4. **Run the project:**
 
     - **MacOS/Linux:**
 

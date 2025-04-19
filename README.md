@@ -103,7 +103,7 @@ Put these 3 files in the lib folder
 The application produces two main sections of output:
 
 ### Word Count Summary
-![Word Count Summary](./assests/Word_Count.png)
+![Word Count Summary](./assets/Word_Count.png)
 
 ### Sentiment Analysis
-![Sentiment Analysis](./assests/Sentiment_Analysis.png)
+![Sentiment Analysis](./assets/Sentiment_Analysis.png)

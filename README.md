@@ -48,7 +48,62 @@ The code reads from a CSV file containing COVID-19 related tweets. The expected 
    - Word frequency analysis: counts non-stopwords and displays them sorted by frequency
    - Sentiment analysis: determines the sentiment score of each tweet
 
+## How To Use It
+
+### Step 1: Clone the Repository
+
+Git clone this repository into your folder of choice using 
+  ```bash
+    git clone https://github.com/Coleg2005/COVID-Sentiment-Analyzer
+  ```
+ and make a folder inside called lib.
+
+
+### Step 2: Download Needed Files
+
+If you don't have JDK (Java Development Kit) installed, install it [here](https://www.oracle.com/java/technologies/downloads/).
+
+Then download these 3 dependencies and put them into the lib folder.
+
+Install the zip folder [here](https://nlp.stanford.edu/software/stanford-corenlp-full-2018-10-05.zip)
+
+From the zip folder, you only need one file:
+    ```bash
+    stanford-corenlp-3.9.2.jar
+    ```
+
+The second & third file you will need can be found [here](https://repo1.maven.org/maven2/com/googlecode/efficient-java-matrix-library/ejml/0.23/ejml-0.23.jar) and [here](https://nlp.stanford.edu/software/stanford-english-corenlp-2018-10-05-models.jar)
+
+Put these 3 files in the lib folder
+
+6. **Compile the project:**
+        
+    - **MacOS/Linux:**
+        ```bash
+        javac -cp "lib/*:." -d . src/*.java
+        ```
+    - **Windows:**
+        ```bash
+        javac -cp "lib/*;." -d . src/*.java
+        ```
+7. **Run the project:**
+
+    - **MacOS/Linux:**
+
+        ```bash
+        java -cp "lib/*:." src.Driver
+        ```
+
+    - **Windows:**
+        ```bash
+        java -cp "lib/*;." src.Driver
+        ```
+
 ## Example Output
 The application produces two main sections of output:
 
 ### Word Count Summary
+![Word Count Summary](./assests/Word_Count.png)
+
+### Sentiment Analysis
+![Sentiment Analysis](./assests/Sentiment_Analysis.png)
